@@ -73,6 +73,7 @@ header {
   width: 100vw;
   color: white;
   z-index: 999;
+  text-shadow: 0 1px 3px #07070a;
 }
 
 header h1.logo {
@@ -215,9 +216,15 @@ header nav ul li a:hover {
   text-align: center;
 }
 
+.skills .wave {
+  position: relative;
+  left: 0;
+  top: -150px;
+}
+
 .skills .wrapper {
-  -webkit-transform: translateY(-70px);
-          transform: translateY(-70px);
+  -webkit-transform: translateY(-250px);
+          transform: translateY(-250px);
 }
 
 .skills h1 {

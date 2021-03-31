@@ -77,6 +77,7 @@ header {
     width: 100vw;
     color: white;
     z-index: 999;
+    text-shadow: 0 1px 3px $almost-black;
 
     h1.logo {
         display: inline-block;
@@ -215,8 +216,15 @@ header {
     background: $almost-white;
     text-align: center;
 
+    .wave {
+        // transform: translateY(-150px);
+        position: relative;
+        left: 0;
+        top: -150px;
+    }
+
     .wrapper {
-        transform: translateY(-70px);
+        transform: translateY(-250px);
     }
 
     h1 {
