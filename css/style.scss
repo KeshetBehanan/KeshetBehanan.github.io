@@ -1,0 +1,160 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+// Colors
+$blurple: #778fe6;
+$reddish: #e65364;
+$almost-white: #fafff0;
+$grey: #2b2e33;
+$almost-black: #07070a;
+
+// Global Classes
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+* {
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body, h1 {
+    margin: 0;
+}
+
+a.btn {
+    background: white;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 16px;
+    color: $almost-black;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform ease-in-out 100ms;
+    appearance: button;
+    text-decoration: none;
+
+    &.dark {
+        background: $almost-black;
+        color: white;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        transform: scale(0.975);
+    }
+
+    &:active {
+        border: $almost-white 2px solid;
+        padding: 18px 28px;
+    }
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100vw;
+    color: white;
+    z-index: 999;
+
+    h1.logo {
+        display: inline-block;
+        a {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    nav {
+        float: right;
+        
+        ul {
+            list-style: none;
+            
+            li {
+                float: left;
+                margin-left: 50px;
+                text-transform: lowercase;
+                
+                a {
+                    text-decoration: none;
+                    color: white;
+                    opacity: 75%;
+                    padding: 3px 5px;
+                    transition: ease-in-out 100ms;
+
+                    &:hover {
+                        opacity: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cover {
+    height: 100vh;
+    background: linear-gradient(to bottom right, darken($blurple, 20%), darken($reddish, 20%));
+
+    canvas {
+        height: 99% !important;
+    }
+
+    .wrapper {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        text-align: center;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: $almost-white;
+        }
+
+        a.btn {
+            pointer-events: all;
+        }
+
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        pointer-events: none;
+    }
+}
+
+.about {
+    height: calc(100vh - 50px);
+    background: $almost-black;
+}
+
+.more-about {
+    height: 100vh;
+    background: $reddish;
+}

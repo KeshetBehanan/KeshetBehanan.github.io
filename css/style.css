@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+.wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+* {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body, h1 {
+  margin: 0;
+}
+
+a.btn {
+  background: white;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 16px;
+  color: #07070a;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform ease-in-out 100ms;
+  transition: -webkit-transform ease-in-out 100ms;
+  transition: transform ease-in-out 100ms;
+  transition: transform ease-in-out 100ms, -webkit-transform ease-in-out 100ms;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  text-decoration: none;
+}
+
+a.btn.dark {
+  background: #07070a;
+  color: white;
+}
+
+a.btn:focus {
+  outline: none;
+}
+
+a.btn:hover {
+  -webkit-transform: scale(0.975);
+          transform: scale(0.975);
+}
+
+a.btn:active {
+  border: #fafff0 2px solid;
+  padding: 18px 28px;
+}
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100vw;
+  color: white;
+  z-index: 999;
+}
+
+header h1.logo {
+  display: inline-block;
+}
+
+header h1.logo a {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  float: left;
+  margin-left: 50px;
+  text-transform: lowercase;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  opacity: 75%;
+  padding: 3px 5px;
+  -webkit-transition: ease-in-out 100ms;
+  transition: ease-in-out 100ms;
+}
+
+header nav ul li a:hover {
+  opacity: 100%;
+}
+
+.cover {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(#264bd1), to(#b81b2d));
+  background: linear-gradient(to bottom right, #264bd1, #b81b2d);
+}
+
+.cover canvas {
+  height: 99% !important;
+}
+
+.cover .wrapper {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  text-align: center;
+}
+
+.cover .wrapper h1 {
+  font-size: 3rem;
+}
+
+.cover .wrapper p {
+  font-size: 1.5rem;
+  color: #fafff0;
+}
+
+.cover .wrapper a.btn {
+  pointer-events: all;
+}
+
+.cover img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  pointer-events: none;
+}
+
+.about {
+  height: calc(100vh - 50px);
+  background: #07070a;
+}
+
+.more-about {
+  height: 100vh;
+  background: #e65364;
+}
+/*# sourceMappingURL=style.css.map */
