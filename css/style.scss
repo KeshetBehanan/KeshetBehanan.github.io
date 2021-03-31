@@ -30,6 +30,10 @@ body, h1, h2 {
     line-height: 1.25em;
 }
 
+img {
+    pointer-events: none;
+}
+
 a.btn {
     background: white;
     border: none;
@@ -77,7 +81,7 @@ header {
     h1.logo {
         display: inline-block;
         a {
-            font-size: 1.5  rem;
+            font-size: 1.5rem;
             text-transform: uppercase;
             color: white;
             text-decoration: none;
@@ -150,7 +154,6 @@ header {
         width: 100%;
         object-fit: cover;
         object-position: top;
-        pointer-events: none;
     }
 }
 
@@ -193,4 +196,65 @@ header {
 .more-about {
     height: 100vh;
     background: $reddish;
+
+    .content {
+        padding-top: 100px;
+
+        img {
+            // position: relative;
+            mask-image: url('../assets/svg/left-image-mask.svg');
+            width: 30%;
+            max-height: 80vh;
+            mask-repeat: no-repeat;
+        }
+    }
+
+}
+
+.skills {
+    background: $almost-white;
+    text-align: center;
+
+    .wrapper {
+        transform: translateY(-70px);
+    }
+
+    h1 {
+        text-transform: uppercase;
+        color: $reddish;
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-top: 100px;
+        gap: 50px;
+
+        .skill-item {
+            background: $blurple;
+            border-radius: 64px;
+            text-align: center;
+            padding: 40px 20px;
+            filter: drop-shadow(0 0 4px $almost-black);
+            transition: ease-in-out 100ms;
+
+            img {
+                width: 70%;
+                aspect-ratio: 1;
+                margin: 0 auto 25px;
+                display: block;
+                filter: drop-shadow(0 0 4px $almost-black);
+            }
+            span {
+                font-size: 1.25rem;
+                font-weight: bold;
+                color: white;
+            }
+            
+            &:hover {
+                transform: translateY(-10px);
+                filter: drop-shadow(0 5px 8px $almost-black);}
+        }
+    }
 }

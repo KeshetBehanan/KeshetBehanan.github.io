@@ -20,6 +20,10 @@ body, h1, h2 {
   line-height: 1.25em;
 }
 
+img {
+  pointer-events: none;
+}
+
 a.btn {
   background: white;
   border: none;
@@ -76,7 +80,7 @@ header h1.logo {
 }
 
 header h1.logo a {
-  font-size: 1.5  rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: white;
   text-decoration: none;
@@ -152,7 +156,6 @@ header nav ul li a:hover {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  pointer-events: none;
 }
 
 .about {
@@ -192,5 +195,76 @@ header nav ul li a:hover {
 .more-about {
   height: 100vh;
   background: #e65364;
+}
+
+.more-about .content {
+  padding-top: 100px;
+}
+
+.more-about .content img {
+  -webkit-mask-image: url("../assets/svg/left-image-mask.svg");
+          mask-image: url("../assets/svg/left-image-mask.svg");
+  width: 30%;
+  max-height: 80vh;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.skills {
+  background: #fafff0;
+  text-align: center;
+}
+
+.skills .wrapper {
+  -webkit-transform: translateY(-70px);
+          transform: translateY(-70px);
+}
+
+.skills h1 {
+  text-transform: uppercase;
+  color: #e65364;
+  font-size: 2rem;
+}
+
+.skills .skills-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.skills .skills-grid .skill-item {
+  background: #778fe6;
+  border-radius: 64px;
+  text-align: center;
+  padding: 40px 20px;
+  -webkit-filter: drop-shadow(0 0 4px #07070a);
+          filter: drop-shadow(0 0 4px #07070a);
+  -webkit-transition: ease-in-out 100ms;
+  transition: ease-in-out 100ms;
+}
+
+.skills .skills-grid .skill-item img {
+  width: 70%;
+  aspect-ratio: 1;
+  margin: 0 auto 25px;
+  display: block;
+  -webkit-filter: drop-shadow(0 0 4px #07070a);
+          filter: drop-shadow(0 0 4px #07070a);
+}
+
+.skills .skills-grid .skill-item span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+.skills .skills-grid .skill-item:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-filter: drop-shadow(0 5px 8px #07070a);
+          filter: drop-shadow(0 5px 8px #07070a);
 }
 /*# sourceMappingURL=style.css.map */
