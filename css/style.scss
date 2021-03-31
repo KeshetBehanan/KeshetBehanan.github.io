@@ -46,6 +46,10 @@ a.btn {
     &.dark {
         background: $almost-black;
         color: white;
+
+        &:active {
+            border: $blurple 4px solid;
+        }
     }
 
     &:focus {
@@ -57,8 +61,8 @@ a.btn {
     }
 
     &:active {
-        border: $almost-white 2px solid;
-        padding: 18px 28px;
+        border: $blurple 4px solid;
+        padding: 16px 26px;
     }
 }
 

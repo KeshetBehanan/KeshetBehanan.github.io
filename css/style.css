@@ -44,6 +44,10 @@ a.btn.dark {
   color: white;
 }
 
+a.btn.dark:active {
+  border: #778fe6 4px solid;
+}
+
 a.btn:focus {
   outline: none;
 }
@@ -54,8 +58,8 @@ a.btn:hover {
 }
 
 a.btn:active {
-  border: #fafff0 2px solid;
-  padding: 18px 28px;
+  border: #778fe6 4px solid;
+  padding: 16px 26px;
 }
 
 header {
