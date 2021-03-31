@@ -21,12 +21,13 @@ $almost-black: #07070a;
 }
 
 html {
-    font-size: 18px;
+    font-size: 24px;
     scroll-behavior: smooth;
 }
 
-body, h1 {
+body, h1, h2 {
     margin: 0;
+    line-height: 1.25em;
 }
 
 a.btn {
@@ -72,7 +73,7 @@ header {
     h1.logo {
         display: inline-block;
         a {
-            font-size: 2rem;
+            font-size: 1.5  rem;
             text-transform: uppercase;
             color: white;
             text-decoration: none;
@@ -124,11 +125,11 @@ header {
         text-align: center;
 
         h1 {
-            font-size: 3rem;
+            font-size: 2rem;
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: $almost-white;
         }
 
@@ -152,6 +153,37 @@ header {
 .about {
     height: calc(100vh - 50px);
     background: $almost-black;
+
+    .content {
+        color: white;
+        padding-top: 200px;
+
+        .wrapper {
+            h2 {
+                font-size: 2rem;
+
+                .blurple {
+                    color: $blurple;
+                }
+        
+                #typed, .typed-cursor {
+                    color: $reddish;
+                }
+            }
+
+            p {
+                color: $almost-white;
+                line-height: 1.75em;
+            }
+        }
+
+        img {
+            border-radius: 64px;
+            width: 30%;
+            float: right;
+            pointer-events: none;
+        }
+    }
 }
 
 .more-about {

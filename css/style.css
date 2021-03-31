@@ -11,12 +11,13 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 24px;
   scroll-behavior: smooth;
 }
 
-body, h1 {
+body, h1, h2 {
   margin: 0;
+  line-height: 1.25em;
 }
 
 a.btn {
@@ -71,7 +72,7 @@ header h1.logo {
 }
 
 header h1.logo a {
-  font-size: 2rem;
+  font-size: 1.5  rem;
   text-transform: uppercase;
   color: white;
   text-decoration: none;
@@ -126,11 +127,11 @@ header nav ul li a:hover {
 }
 
 .cover .wrapper h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .cover .wrapper p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #fafff0;
 }
 
@@ -153,6 +154,35 @@ header nav ul li a:hover {
 .about {
   height: calc(100vh - 50px);
   background: #07070a;
+}
+
+.about .content {
+  color: white;
+  padding-top: 200px;
+}
+
+.about .content .wrapper h2 {
+  font-size: 2rem;
+}
+
+.about .content .wrapper h2 .blurple {
+  color: #778fe6;
+}
+
+.about .content .wrapper h2 #typed, .about .content .wrapper h2 .typed-cursor {
+  color: #e65364;
+}
+
+.about .content .wrapper p {
+  color: #fafff0;
+  line-height: 1.75em;
+}
+
+.about .content img {
+  border-radius: 64px;
+  width: 30%;
+  float: right;
+  pointer-events: none;
 }
 
 .more-about {
