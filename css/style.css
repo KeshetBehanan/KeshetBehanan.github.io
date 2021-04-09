@@ -326,6 +326,9 @@ header nav ul li:first-child {
   header nav ul li {
     margin-left: 20px;
   }
+  .cover {
+    height: calc(var(--vh, 1vh) * 100);
+  }
   .about .content {
     padding-top: 140px;
   }

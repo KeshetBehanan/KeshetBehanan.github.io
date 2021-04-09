@@ -322,6 +322,10 @@ header {
         }
     }
 
+    .cover {
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
     .about {
         .content {
             padding-top: 140px;
