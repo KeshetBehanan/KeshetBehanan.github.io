@@ -78,14 +78,19 @@ header {
     color: white;
     z-index: 999;
     text-shadow: 0 1px 3px $almost-black;
+    pointer-events: none;
+
+    a {
+        color: white;
+        text-decoration: none;
+        pointer-events: all;
+    }
 
     h1.logo {
         display: inline-block;
         a {
             font-size: 1.5rem;
             text-transform: uppercase;
-            color: white;
-            text-decoration: none;
         }
     }
 
@@ -101,8 +106,6 @@ header {
                 text-transform: lowercase;
                 
                 a {
-                    text-decoration: none;
-                    color: white;
                     opacity: 75%;
                     padding: 3px 5px;
                     transition: ease-in-out 100ms;
