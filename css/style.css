@@ -239,10 +239,14 @@ header nav ul li a:hover {
 .skills .skills-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-auto-rows: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 100px;
-  gap: 50px;
+  gap: 40px;
 }
 
 .skills .skills-grid .skill-item {
@@ -254,6 +258,7 @@ header nav ul li a:hover {
           filter: drop-shadow(0 0 4px #07070a);
   -webkit-transition: ease-in-out 100ms;
   transition: ease-in-out 100ms;
+  height: calc(100% - 80px);
 }
 
 .skills .skills-grid .skill-item img {
@@ -266,7 +271,7 @@ header nav ul li a:hover {
 }
 
 .skills .skills-grid .skill-item span {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
   color: white;
 }
