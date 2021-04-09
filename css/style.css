@@ -13,11 +13,17 @@
 html {
   font-size: 24px;
   scroll-behavior: smooth;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
 }
 
 body, h1, h2 {
   margin: 0;
   line-height: 1.25em;
+}
+
+section {
+  scroll-snap-align: start;
 }
 
 img {
@@ -194,6 +200,15 @@ header nav ul li:first-child {
   line-height: 1.75em;
 }
 
+.about .content .wrapper p .char {
+  -webkit-transition: all 0.25s calc(.25s + var(--char-index) * .1s);
+  transition: all 0.25s calc(.25s + var(--char-index) * .1s);
+}
+
+.about .content .wrapper p[data-scroll="out"] .char {
+  opacity: 0;
+}
+
 .about .content img {
   border-radius: 64px;
   width: 30%;
@@ -222,6 +237,7 @@ header nav ul li:first-child {
 .skills {
   background: #fafff0;
   text-align: center;
+  scroll-margin-top: 50px;
 }
 
 .skills .wave {
@@ -261,8 +277,10 @@ header nav ul li:first-child {
   padding: 40px 20px;
   -webkit-filter: drop-shadow(0 0 4px #07070a);
           filter: drop-shadow(0 0 4px #07070a);
-  -webkit-transition: ease-in-out 100ms;
-  transition: ease-in-out 100ms;
+  -webkit-transition: all 500ms ease-in-out, -webkit-transform 100ms ease-in-out;
+  transition: all 500ms ease-in-out, -webkit-transform 100ms ease-in-out;
+  transition: all 500ms ease-in-out, transform 100ms ease-in-out;
+  transition: all 500ms ease-in-out, transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
   height: calc(100% - 80px);
 }
 
@@ -286,6 +304,13 @@ header nav ul li:first-child {
           transform: translateY(-10px);
   -webkit-filter: drop-shadow(0 5px 8px #07070a);
           filter: drop-shadow(0 5px 8px #07070a);
+}
+
+.skills .skills-grid .skill-item[data-scroll="out"] {
+  opacity: 0;
+  background: white;
+  -webkit-filter: none;
+          filter: none;
 }
 
 @media screen and (max-width: 1200px) {
