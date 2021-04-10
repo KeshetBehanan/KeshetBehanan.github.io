@@ -139,7 +139,9 @@
 
     <script>
         Splitting();
-        ScrollOut();
+        ScrollOut({
+            once: true
+        });
         ScrollOut({
             threshold: .5,
             targets: ".skill-item"
