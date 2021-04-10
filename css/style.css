@@ -407,6 +407,7 @@ header nav ul li:first-child {
     -ms-grid-columns: (minmax(140px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 25px;
+    margin-top: 80px;
   }
   .skills .wrapper .skills-grid .skill-item {
     border-radius: 32px;
@@ -445,6 +446,9 @@ header nav ul li:first-child {
   .skills .wrapper {
     -webkit-transform: translateY(20px);
             transform: translateY(20px);
+  }
+  .skills .wrapper .skills-grid {
+    margin-top: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

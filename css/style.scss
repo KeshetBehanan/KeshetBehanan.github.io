@@ -394,6 +394,7 @@ header {
             .skills-grid {
                 grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
                 gap: 25px;
+                margin-top: 80px;
 
                 .skill-item {
                     border-radius: 32px;
@@ -444,6 +445,10 @@ header {
 
         .wrapper {
             transform: translateY(20px);
+
+            .skills-grid {
+                margin-top: 50px;
+            }
         }
     }
 }
