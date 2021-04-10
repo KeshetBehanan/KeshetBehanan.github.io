@@ -172,6 +172,7 @@ header {
 .about {
     height: calc(100vh - 50px);
     background: $almost-black;
+    overflow: hidden;
 
     .content {
         color: white;
@@ -213,6 +214,16 @@ header {
             width: 30%;
             float: right;
             pointer-events: none;
+            opacity: 0;
+            transform: translateX(25vw);
+            transition: all 750ms ease-in-out;
+            filter: grayscale(1) blur(10px);
+
+            &[data-scroll="in"] {
+                opacity: 1;
+                transform: none;
+                filter: grayscale(0);
+            }
         }
     }
 }
@@ -225,7 +236,6 @@ header {
         padding-top: 100px;
 
         img {
-            // position: relative;
             mask-image: url('../assets/svg/left-image-mask.svg');
             width: 30%;
             max-height: 80vh;
@@ -356,6 +366,12 @@ header {
                 img {
                     float: none;
                     margin-bottom: 15px;
+                    transform: scale(.85);
+
+                    &[data-scroll="in"] {
+                        transform: none;
+                        border-radius: 25%;
+                    }
                 }
 
                 p br {

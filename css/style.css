@@ -170,6 +170,7 @@ header nav ul li:first-child {
 .about {
   height: calc(100vh - 50px);
   background: #07070a;
+  overflow: hidden;
 }
 
 .about .content {
@@ -217,6 +218,21 @@ header nav ul li:first-child {
   width: 30%;
   float: right;
   pointer-events: none;
+  opacity: 0;
+  -webkit-transform: translateX(25vw);
+          transform: translateX(25vw);
+  -webkit-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
+  -webkit-filter: grayscale(1) blur(10px);
+          filter: grayscale(1) blur(10px);
+}
+
+.about .content img[data-scroll="in"] {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .more-about {
@@ -365,6 +381,13 @@ header nav ul li:first-child {
   .about .content .wrapper img {
     float: none;
     margin-bottom: 15px;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  .about .content .wrapper img[data-scroll="in"] {
+    -webkit-transform: none;
+            transform: none;
+    border-radius: 25%;
   }
   .about .content .wrapper p br {
     display: none;
