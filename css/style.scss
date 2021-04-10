@@ -199,12 +199,24 @@ header {
                 color: $almost-white;
                 line-height: 1.75em;
 
-                .char {
-                    transition: all .25s calc(.25s + var(--char-index) * .1s);
-                }
+                // .char {
+                //     transition: all .25s calc(.25s + var(--char-index) * .1s);
+                // }
         
-                &[data-scroll="out"] .char {
+                // &[data-scroll="out"] .char {
+                //     opacity: 0;
+                // }
+
+                .char {
                     opacity: 0;
+                    transition: transform .3s cubic-bezier(.3, 0, .3, 1), opacity .3s linear;
+                    transition-delay: calc(25ms * var(--char-index));
+                    transform: translateY(.25em);
+                }
+    
+                &[data-scroll="in"] .char {
+                    opacity: 1;
+                    transform: translateY(0);
                 }
             }
         }
