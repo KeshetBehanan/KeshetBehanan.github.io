@@ -383,11 +383,15 @@ header nav ul li:first-child {
     margin-bottom: 15px;
     -webkit-transform: scale(0.85);
             transform: scale(0.85);
+    -webkit-filter: grayscale(1) blur(6px);
+            filter: grayscale(1) blur(6px);
   }
   .about .content .wrapper img[data-scroll="in"] {
     -webkit-transform: none;
             transform: none;
     border-radius: 25%;
+    -webkit-filter: none;
+            filter: none;
   }
   .about .content .wrapper p br {
     display: none;

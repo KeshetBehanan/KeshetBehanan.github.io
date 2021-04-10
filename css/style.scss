@@ -367,10 +367,12 @@ header {
                     float: none;
                     margin-bottom: 15px;
                     transform: scale(.85);
+                    filter: grayscale(1) blur(6px);
 
                     &[data-scroll="in"] {
                         transform: none;
                         border-radius: 25%;
+                        filter: none;
                     }
                 }
 
