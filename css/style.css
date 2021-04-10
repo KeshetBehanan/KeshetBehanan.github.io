@@ -270,6 +270,10 @@ header nav ul li:first-child {
   font-size: 2rem;
 }
 
+.cover .wrapper h1 span {
+  white-space: nowrap;
+}
+
 .cover .wrapper p {
   font-size: 1.25rem;
   color: #fafff0;
