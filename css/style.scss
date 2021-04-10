@@ -23,17 +23,12 @@ $almost-black: #07070a;
 html {
     font-size: 24px;
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
     
 }
 
 body, h1, h2 {
     margin: 0;
     line-height: 1.25em;
-}
-
-section {
-    scroll-snap-align: start;
 }
 
 img {
@@ -199,14 +194,6 @@ header {
                 color: $almost-white;
                 line-height: 1.75em;
 
-                // .char {
-                //     transition: all .25s calc(.25s + var(--char-index) * .1s);
-                // }
-        
-                // &[data-scroll="out"] .char {
-                //     opacity: 0;
-                // }
-
                 .char {
                     opacity: 0;
                     transition: transform .3s cubic-bezier(.3, 0, .3, 1), opacity .3s linear;
@@ -251,7 +238,6 @@ header {
 .skills {
     background: $almost-white;
     text-align: center;
-    scroll-margin-top: 50px;
 
     .wave {
         position: relative;

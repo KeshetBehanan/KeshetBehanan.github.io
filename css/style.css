@@ -13,17 +13,11 @@
 html {
   font-size: 24px;
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
 }
 
 body, h1, h2 {
   margin: 0;
   line-height: 1.25em;
-}
-
-section {
-  scroll-snap-align: start;
 }
 
 img {
@@ -246,7 +240,6 @@ header nav ul li:first-child {
 .skills {
   background: #fafff0;
   text-align: center;
-  scroll-margin-top: 50px;
 }
 
 .skills .wave {
